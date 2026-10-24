@@ -111,3 +111,9 @@ Arkadaş maçları ranked puanını etkilememelidir. Henüz uygulanmayan modlar�
 - rooms.js1,5sn polling, sunucu zamanı ofsetli sayaç; bağlantı sorunu/hesap değişimi yarışları korunur. Poll tahmin alanını silmemeli veya odağını düşürmemeli. Room sonuçları solo beta tablosuna veya ranka yazılmaz; maç skoru oda ömründedir.
 - Cevap/kapağı UI’da sonuçtan önce açma. Yerel catalog.js ve anlamlı song_id teknik olarak incelenebilir; bu sürümü ranked için hileye dayanıklı diye tanıtma.
 - Sites kullanılmaz. Uzak arkadaşların gerçek cihaz testi için aynı dosyaların ulaşılabilir adreste barındırılması ayrı iştir.
+
+## GitHub ve Pages
+
+- Kaynak deposu https://github.com/EReaXe/duydum; main branch origin/main izler. Kullanıcı yüklemeyi onayladı. Eski Sites prototip geçmişi local-prototype-archive dalında yerel arşivdir; bu dalı yayınlama.
+- GitHub Pages uyumlu statik yapı; .nojekyll ve göreli asset yollarını koru. new URL('./',document.baseURI) auth dönüşünde /duydum/ alt yolunu korur. Pages yayını etkinleştirilmiş/doğrulanmış sayılmaz; önce deployment sonucunu kontrol et.
+- config.js public publishable key içindir; secret/service_role ekleme. Localhost oturumu başka origin’e taşınmaz.
