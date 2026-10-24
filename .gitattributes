@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.mp3 -text
+*.jpg -text
+*.png -text
+*.webp -text
+assets/vendor/supabase-2.118.0.js -text
+*.cmd text eol=crlf

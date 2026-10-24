@@ -1,0 +1,101 @@
+[
+  {
+    "id": "manifest-tralala",
+    "inputBytes": 321129,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  },
+  {
+    "id": "eypio-burak-king-gunah-benim",
+    "inputBytes": 641286,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  },
+  {
+    "id": "manifest-zamansizdik",
+    "inputBytes": 641286,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  },
+  {
+    "id": "uzi-motive-sarkilar-sokaklara-ait",
+    "inputBytes": 2806732,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  },
+  {
+    "id": "manifest-toz-pembe",
+    "inputBytes": 641286,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  },
+  {
+    "id": "manifest-ruya",
+    "inputBytes": 641286,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  },
+  {
+    "id": "crush-crush",
+    "inputBytes": 641286,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  },
+  {
+    "id": "manifest-ajda-pekkan-hileli",
+    "inputBytes": 641286,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  },
+  {
+    "id": "murda-motive-karambol",
+    "inputBytes": 321129,
+    "outputBytes": 255790,
+    "frames": 612,
+    "sampleRate": 44100,
+    "seconds": 15.986938775510204,
+    "clearedMetadata": [
+      "Info"
+    ]
+  }
+]

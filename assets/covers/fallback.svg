@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none">
+  <title>Yazısız şarkı kapağı</title>
+  <defs>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="8" cy="8" r="2" fill="#FFFFFF" opacity=".09"/></pattern>
+  </defs>
+  <rect x="8" y="8" width="464" height="464" rx="42" fill="#2B1B64" stroke="#100B2A" stroke-width="16"/>
+  <rect x="16" y="16" width="448" height="448" rx="34" fill="url(#dots)"/>
+  <path d="M35 357 184 436M311 48l133 70" stroke="#4C348C" stroke-width="42" stroke-linecap="round"/>
+  <circle cx="247" cy="249" r="151" fill="#100B2A"/>
+  <circle cx="240" cy="236" r="151" fill="#FF66BD" stroke="#100B2A" stroke-width="10"/>
+  <circle cx="240" cy="236" r="118" stroke="#100B2A" stroke-opacity=".23" stroke-width="3"/>
+  <circle cx="240" cy="236" r="104" stroke="#100B2A" stroke-opacity=".23" stroke-width="3"/>
+  <circle cx="240" cy="236" r="89" stroke="#100B2A" stroke-opacity=".23" stroke-width="3"/>
+  <circle cx="240" cy="236" r="65" fill="#FFD447" stroke="#100B2A" stroke-width="9"/>
+  <path d="M208 231v15m16-30v45m16-60v70m16-47v31m16-23v15" stroke="#100B2A" stroke-width="9" stroke-linecap="round"/>
+  <path d="m81 69 9 23 24 8-24 8-9 24-8-24-24-8 24-8 8-23Z" fill="#FFD447" stroke="#100B2A" stroke-width="7" stroke-linejoin="round"/>
+  <path d="m382 329 9 23 24 8-24 8-9 24-8-24-24-8 24-8 8-23Z" fill="#35D99B" stroke="#100B2A" stroke-width="7" stroke-linejoin="round"/>
+  <path d="m350 69 17 12m-6-31 3-18m20 40 19-4M67 361l-19 5m29 15-5 19" stroke="#FF66BD" stroke-width="9" stroke-linecap="round"/>
+</svg>
