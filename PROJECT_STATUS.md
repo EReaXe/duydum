@@ -1,6 +1,14 @@
+## Canlı yayın doğrulaması — 27 Ekim 2026
+
+https://ereaxe.github.io/islem/ açık beta yayını hazır. Repo https://github.com/EReaXe/islem. Kaynak b431b9edd8c60c7fcc955ade258fc1f2f1a86039;GitHubActions run40580659098 build/deploy success. ResmiActiontagları gitls-remote ile doğrulanıp commitSHAya sabitlendi.
+
+Canlı9runtime/lisansdosyasınınHTTP200veSHA256değeriGitbloblarıylaeşleşti. .nojekyll yayınmetaverisidir;PagesdottargetiHTTP404dönebilir. db/math.sql,scripts/test-ranked-live.cjs,.local-tests/raporveassets/track-001.mp3 canlısitede404. ÜretimOriginCORSpreflightveanonimliderlik200. ChromePagesüzerindekorunanhesapoturumu/profiladı/liderlikgörüldü. TemizIABmisafirolarak90sniçinSolobaşladı,3×3−4=5cevabı+100puan/+5snvesonrakisoruyuaçtı;errorlogboş. Gerçekkullanıcıya bu yayındenemesindeyeniskorkaydıeklenmedi.
+
+Yayınaengelgüvenlikhatasıbulunmadı;bağımsızsonSQL/istemcidenetimiveNodepaketigeçti. Yük/penetrasyontestiveotomatikçözücü/Sybil/antiDDoSgarantisiyok. Leakedpasswordprotectionkapalımevcutuyarısı SECURITY.md içindebelgeli.
+
 ## Yayın hazırlığı ve güvenlik — 27 Ekim 2026
 
-Kullanıcı iki botun kalıcı temizliğini onayladı;yalnız buikiAuthhesabı ve ilgili2testmaçı silindi,kalanbot0. Eski GitHub deposu EReaXe/islem olarak yeniden adlandırıldı;yerelorigin güncellendi. Pages kaynağıGitHubActions seçildi. Yeni matematikdeploymentsonucu henüz doğrulanmadı.
+Kullanıcı iki botun kalıcı temizliğini onayladı;yalnız buikiAuthhesabı ve ilgili2testmaçı silindi,kalanbot0. Eski GitHub deposu EReaXe/islem olarak yeniden adlandırıldı;yerelorigin güncellendi. Pages kaynağıGitHubActions seçildi. Yeni matematik sürümü başarıyla yayınlandı ve canlı kontrol edildi.
 
 Güvenlik:backend yetki/grant/RLS/definer/UUID/rate/payload/state testleri ve bağımsızfrontenddenetimi geçti. Kuyruk→Solo çiftoturumyarışı kapatıldı;hesapAPI/başlangıçbütçesi ve4KBobjectguard eklendi;emeklimüzikyazıları kapalı. CSP,SDK SRI,SHA-sabitActions ve10dosyalık yayınizinlistesi eklendi. Ayrıntı SECURITY.md. Kalan bot/Sybil/anontrafik veparolakoruma sınırlarıaçıkbetasınırıolarakbelirtildi.
 

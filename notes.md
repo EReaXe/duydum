@@ -132,3 +132,5 @@ Kullanıcı daha rahat tempo için en uygun ayarın seçilmesini onayladı. Yeni
 ## Yayın kararı — 27 Ekim 2026
 
 [Kullanıcı/onaylandı] İkibottesthesabınıveverisinisilme;güvenlikdenetimindensonragüncelsürümüGitHubPagesileyayınlama,eski depoyuyenidenadlandırma. [Uygulandı] İkihesaptemizlendi,depoadıislem,PagesActions. [Değerlendirme] Gündelikaçıkbeta;mutlakgüvenlik/antihilegarantisiyok.
+
+[27Ekim2026/yayındoğrulandı] EReaXe/islem deposunda b431b9e sürümü Actions40580659098ileyayında. CanlıadresHTTPS,9dosyaGitSHAeşleşmesi,özelfile404,CORS/liderlikveIABmisafirSolobonusdoğrulandı.
