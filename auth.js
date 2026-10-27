@@ -28,7 +28,7 @@
   function setMode(next) {
     mode = next;
     const signup = mode === 'signup';
-    byId('auth-title').textContent = signup ? 'Sahneye katıl!' : 'Tekrar hoş geldin!';
+    byId('auth-title').textContent = signup ? 'Yarışa katıl!' : 'Tekrar hoş geldin!';
     byId('auth-submit').textContent = signup ? 'Hesap oluştur →' : 'Giriş yap →';
     byId('auth-switch').textContent = signup ? 'Hesabın var mı? Giriş yap' : 'Yeni misin? Hesap oluştur';
     byId('auth-name-row').hidden = !signup;
@@ -37,7 +37,7 @@
     byId('auth-password-confirm').required = signup;
     byId('auth-password').minLength = signup ? 8 : 1;
     byId('auth-password').autocomplete = signup ? 'new-password' : 'current-password';
-    byId('auth-mode-note').textContent = signup ? 'Oyuncu adını, e-postanı ve şifreni yaz; sahneye katıl.' : 'E-posta adresin ve şifrenle devam et.';
+    byId('auth-mode-note').textContent = signup ? 'Oyuncu adını, e-postanı ve şifreni yaz; yarışa katıl.' : 'E-posta adresin ve şifrenle devam et.';
     message('');
   }
   function open(next) {

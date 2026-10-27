@@ -1,3 +1,31 @@
+
+## Ranked kişisel saat düellosu — 27 Ekim 2026
+
+Kullanıcı Ranked için heroyuncu90sn,doğruya kendi saatine+5sn,sınırsızsoru ve önce saati bitenin kaybetmesi kuralını istedi. Yeni maçlarda eski10soru/puanla kazanan sistemi yerini bu kurala bırakır. Aynı sorudizisinde bağımsız ilerleme,ortak3snbaşlangıç,yanlış3sn ve RankedPas kapalı uygulama seçimleridir. Elo maç sonucuna göre kalır; Solo bağımsızdır.
+
+Aşağıdaki eski Ranked10soru kayıtları tarihsel sürüme aittir.
+
+## Ranked — Elo kararı (27 Ekim 2026)
+
+- Kullanıcı Ranked için Elo sistemi istedi. Ranked derecesi maç sonucu ve rakibin Elo değerine göre değişecek; soru puanları doğrudan Elo olarak eklenmeyecek.
+- Solo oyunlar yalnız solo liderlik puanına etki eder; Ranked Elo, rütbe ve eşleştirme seviyesini değiştirmez.
+- Başlangıç Elo, K katsayısı, rütbe eşikleri, yerleştirme maçları, beraberlik ve ayrılma kuralları henüz kesinleşmedi. Ranked oyuncu sayısı da açık; 1'e 1 ajan önerisidir.
+
+## Matematik yarışı — kullanıcı kararı ve açık tasarım
+
+27 Ekim 2026: Hızlı işlem, kolay fakat düşündüren sorular, Solo dönemsel liderlik ve Ranked yarış kullanıcı tarafından seçildi. Ranked doğru cevap sırası soru puanını belirleyecek; maç sonucu rank ilerlemesini etkileyecek. Haftalık/aylık dönem, oyuncu sayısı, 10 soruluk maç örneği ve kesin puan/rank hesabı açık. Yeni ürün için arkadaş modu kararı henüz verilmedi.
+
+# Yeni ürün yönü — 27 Ekim 2026
+
+- [Kullanıcı / onaylandı] Müzik yerine matematik soruları üzerine oyun; GitHub Pages yayını; adım adım ortak geliştirme. Yalnız HTML/CSS/JS kısıtı kaldırıldı.
+- [Açık] Hedef kitle, zorluk ve konular, yazılı/şıklı cevap, süre/puan, solo/arkadaş önceliği, isim ve görsel yön.
+- [Ajan / öneri] Önce kısa solo prototiple temel oyun döngüsünü doğrula, ardından arkadaş yarışını uyarla. Bu henüz kullanıcı kararı değildir.
+- [Koruma] Hazırlık aşamasında eski varlıklar ve uzak veriler silinmedi.
+
+Aşağıdaki notlar eski müzik sürümünün tarihsel kayıtlarıdır.
+
+---
+
 # Duydum! — fikir ve karar notları
 
 Son derleme: 24 Ekim 2026. Bu dosya fikir arşividir; bağlayıcı kurallar AGENTS.md / CLAUDE.md içindedir.
@@ -76,3 +104,31 @@ Son derleme: 24 Ekim 2026. Bu dosya fikir arşividir; bağlayıcı kurallar AGEN
 - [Kalan] Erişilebilir URL ve gerçek arkadaşların iki cihazla kapalı beta doğrulaması. Sites yok. Şimdiki localhost başka cihazda çalışmaz.
 
 - [Kullanıcı / uygulandı] Solo kartı kilit ikonuyla düzeltildi; son denetim ve testler yapıldı. EReaXe/duydum deposuna güncel projeyi yükleme istendi; GitHub Pages uyumluluğu araştırıldı, statik alt dizin yolları/dinamik auth dönüşü hazırlandı. Pages yayını henüz doğrulanmış değildir.
+
+## Elo rütbeleri — 27 Ekim 2026
+
+Ana sayfaya altı rütbeli statik Ranked ön izlemesi eklendi: Çırak (0–999), Hesapçı (1000–1199), Çözücü (1200–1399), Stratejist (1400–1599), Üstat (1600–1799), Dâhi (1800+). İsimler ve eşikler ajan başlangıç önerisidir, kullanıcı tarafından ayrı ayrı kesinleştirilmedi. Solo Elo etkilemez. Gerçek Elo hesabı/eşleştirme ve oyuncu rütbe kaydı bağlanmadı. Mevcut müzik arayüzünün tamamı henüz dönüştürülmedi. Yerel inline SVG rozetler ve 6/3/2 sütunlu responsive CSS kullanıldı.
+
+## Matematik ilk oynanabilir sürüm — 27 Ekim 2026
+
+- [Kullanıcı / uygulandı] Site tamamen matematik yarışına dönüştürüldü. Solo, dönemsel sıralama ve gerçek1v1Ranked/Elo backend'i eklendi. Eski müzik verileri korundu.
+- [Uygulama varsayımı] İşlem! çalışma adı;10soru20sn,2sn sonuç,yanlış3sn;solo100,ranked100/60;Elo1000/K32;ilkRanked23sn. Kullanıcı bu sayıları ayrı ayrı kesinleştirmedi.
+- [Uygulama varsayımı] Haftalık(Pazartesi)/aylık(ayın1'i) İstanbul döneminde tamamlanan tüm girişli solo puanları toplanır. Misafir koşuları yalnız cihaz geçmişine gider. Elo asla Solo'dan değişmez.
+- [Doğrulandı] Node motor/UI yarış testleri,SQL iki oyuncu rollback,gerçek Chrome misafir10tur ve390pxmobil. Ayrıntı PROJECT_STATUS.md.
+- [Kalan] İki gerçek hesapla Ranked cihaz denemesi,yayın,nihai isim,denge ve bot önleme. Yayınlanmış gibi sunma.
+
+## Kullanıcı kararı — sınırsız Solo koşusu
+
+Solo60snbaşlangıç,sorulimitsiz,her doğruya mevcut süreye+5sn;50sn→55sn. Uygulandı:anında yeni soru,+100puan,skip0bonus,yanlış3sn veakanortaksayaç.18kalıp eklendi. Süre üst sınırı konulmadı. Ranked10soru ve Solo/Elo ayrımı korunur. Kullanıcı öncekiSolo çalışmasını doğruladı;Ranked gerçekcihaztestini şimdilik yapamayacağını söyledi.
+
+## Solo tempo ayarı — 27 Ekim 2026
+
+Kullanıcı daha rahat tempo için en uygun ayarın seçilmesini onayladı. Yeni Solo başlangıcı90saniye;doğru+5saniye/+100puan,yanlış3sn,sorulimitsiz kuralı korunur. Önceki60saniye kayıtları tarihseldir. Yeni süre yalnız yeni koşularda başlar;aktif koşu sıfırlanmaz. Node motor/UI kontrolleri90→80→85 örneğiyle güncellendi.
+
+## Liderlik ve profil — 27 Ekim 2026
+
+[Kullanıcı/uygulandı] Avatar,rütbe rozeti,oyuncu profili ve aylık sekme görselhatası düzeltildi. [Kullanıcı/testedildi] İkigerçekAuthbotuylaRanked süre/bonus/sonuç/Elo ve ayrılma testi geçti;ayrıChromeoriginindebotUIoyunu da incelendi. [Bekliyor] Otomatikinceleme ikigeçicibotun kalıcı silinmesini açıkonayolmadığından reddetti;temizlikonayıgerekiyor.
+
+## Yayın kararı — 27 Ekim 2026
+
+[Kullanıcı/onaylandı] İkibottesthesabınıveverisinisilme;güvenlikdenetimindensonragüncelsürümüGitHubPagesileyayınlama,eski depoyuyenidenadlandırma. [Uygulandı] İkihesaptemizlendi,depoadıislem,PagesActions. [Değerlendirme] Gündelikaçıkbeta;mutlakgüvenlik/antihilegarantisiyok.

@@ -1,102 +1,99 @@
-# Duydum! — proje durumu
+## Yayın hazırlığı ve güvenlik — 27 Ekim 2026
 
-Son doğrulama: 24 Ekim 2026. Bu belge projenin seviyesini kaydeder; kullanıcının kişisel teknik seviyesini varsaymaz.
+Kullanıcı iki botun kalıcı temizliğini onayladı;yalnız buikiAuthhesabı ve ilgili2testmaçı silindi,kalanbot0. Eski GitHub deposu EReaXe/islem olarak yeniden adlandırıldı;yerelorigin güncellendi. Pages kaynağıGitHubActions seçildi. Yeni matematikdeploymentsonucu henüz doğrulanmadı.
+
+Güvenlik:backend yetki/grant/RLS/definer/UUID/rate/payload/state testleri ve bağımsızfrontenddenetimi geçti. Kuyruk→Solo çiftoturumyarışı kapatıldı;hesapAPI/başlangıçbütçesi ve4KBobjectguard eklendi;emeklimüzikyazıları kapalı. CSP,SDK SRI,SHA-sabitActions ve10dosyalık yayınizinlistesi eklendi. Ayrıntı SECURITY.md. Kalan bot/Sybil/anontrafik veparolakoruma sınırlarıaçıkbetasınırıolarakbelirtildi.
+
+## Liderlik, genel profiller ve gerçek bot testi — 27 Ekim 2026
+
+Liderlik satırlarına avatar,Ranked rütbe rozeti,Elo ve profil açma eklendi. Aylık seçimin iki sekmeyi dolu göstermesi CSS .active etkisinden kaynaklanıyordu;yalnız aria-pressed=true kullanılarak düzeltildi. Genel profilde ad/avatar,Elo ve toplam Solo/Ranked sayıları var;e-posta/özel geçmiş yok. Backend migration math_public_player_profiles_and_leaderboard_badges canlıda;anonim ve girişli genel profil desteklenir.
+
+Doğrulama:Node dönem/profil eskiyanıt yarışları,kapatma sonrası geçyanıt,avatar whitelist,güvenli metin,tümrütbe eşikleri ve oyun/authregresyonları geçti. SQL8alan allowlist,anonim/girişli profil,gizlilik ve okuma yan etkisizliği geçti. Chrome gerçek9000puanlı kullanıcı satırı/avatar/Hesapçı1000veprofilistatistikleri doğrulandı;buay seçili iken buhafta transparent,buay dolgulu. Mobil390px/content375px,liderlik ve profil taşmasız görselkontrol edildi.
+
+Gerçek Ranked:iki geçici Auth hesabı standartsignup/passwordlogin ile açıldı. Normaloyunculara karışmamak için yalnız botların Elo değerleri10000ile izole edildi. İki ayrıHTTP istemci gerçekmaç oynadı;aynı soru dizisi,+5yalnızkendi saatinde,yanlış3sn,UUIDyenidenistekteçiftbonusolmaması doğrulandı. Gerçek95snsaati biten BotB kaybetti;BotA+16/BotB−16Elo. Tamamlanmışmaçpoll ikinciEloyazmadı. İkincimaçta BotAayrıldı,BotBkazandı. Ağraporu .local-tests/ranked-live-report.json success=true. Normal kullanıcı hesabınınpuanına/Elo'sunadokunulmadı.
+
+BotA ayrı127.0.0.1Chromeorigininde giriş yaptı;gerçekRanked oyunekranı,ikisayaç,botBdoğrusayısı ve tarayıcıdan6×3−10=8cevabıyla4doğru/+5snbildirimigörüldü.390pxbotmaçı content375px,yataytaşmayok. Tamsonuç/EloHTTP+SQLiledoğrulandı;ikifizikselcihaz testi yapılmadı. Başarısızilkcanlıtestin nedeni testscriptindeB'nin2.sorusunuA'nın3.sorusuyla karşılaştırmasıydı;ürünhatasıdeğildi,düzeltildi ve testbaştanbaşarılıtamamlandı.
+
+Testhesaplarıve2maçkaydı henüzduruyor:kalıcıtemizlemeotomatikonayincelemesince,kullanıcınınsilmeaçıkonayıolmadığıgerekçesiyle reddedildi. Silmekiçin kullanıcıonayıgerekiyor. Geçiciparoladosyası yereldensilindi;.local-tests/ gitignorealtında. BotlarSolotablosunapuaneklemedi;maçlarbitmişvekuyrukboş.
+
+Yeni arayüz yerelde,backendcanlıda. GitHub/Pagesyayınıyapılmadı. Önceki 'gerçekikihesapdenenmedi' kayıtları bu yenitesttenönceki tarihselkanıtlardır.
+
+
+## Ranked kişisel saat düellosu — 27 Ekim 2026
+
+Kullanıcı Ranked için heroyuncu90sn,doğruya kendi saatine+5sn,sınırsızsoru ve önce saati bitenin kaybetmesi kuralını istedi. Yeni maçlarda eski10soru/puanla kazanan sistemi yerini bu kurala bırakır. Aynı sorudizisinde bağımsız ilerleme,ortak3snbaşlangıç,yanlış3sn ve RankedPas kapalı uygulama seçimleridir. Elo maç sonucuna göre kalır; Solo bağımsızdır.
+
+Aşağıdaki eski Ranked10soru kayıtları tarihsel sürüme aittir.
+
+# İşlem! — proje durumu
+
+Son güncelleme: 27 Ekim 2026. İşlem! geçici çalışma adıdır.
 
 ## Mevcut seviye
 
-Ana sayfa + 10 şarkılı solo beta + çalışan Supabase Auth + kişisel profil ve kalıcı beta sonuçları. Kullanıcı kayıt/girişin çalıştığını doğruladı. Arkadaş odası backend ve istemcisi eklendi; dış adres ve gerçek cihazlarla kapalı beta denemesi sıradaki doğrulamadır.
+Müzik arayüzü tamamen matematik yarışına dönüştürüldü. Yeni ana sayfa, Solo/Ranked, haftalık/aylık liderlik, rütbeler, soru/sonuç ve profil ekranları hazır. Eski hesap entegrasyonu korunur; eski müzik kodu/varlıkları ve sonuç verileri silinmedi, aktif sayfadan yüklenmez.
 
-## Çalışan özellikler
+Güncel tempo: Yeni Solo koşuları90 saniyeyle başlar; doğruya+5 saniye. Aşağıdaki60 saniyelik test kayıtları önceki ayara aittir.
 
-- Duydum! mor/pembe/sarı/yeşil responsive arayüz, yerel SVG marka ve soyut yedek kapak.
-- E-posta/şifre kayıt-giriş; SDK oturum yenileme/kalıcılığı ve bu tarayıcıdan çıkış. E-posta doğrulaması kullanıcı isteğiyle kapalı; canlı settings mailer_autoconfirm=true.
-- Profilim penceresinde görünen ad ve dört avatar rengi düzenlenir (Auth metadata, yetki amacıyla kullanılmaz).
-- Yazılı şarkı tahmini, normalleştirme, basit yazım toleransı; 1/2/4/7/11/16 saniye; Pas/yanlış ilerlemesi; 60 saniye; sonuç ve tekrar.
-- Girişli tur sonuçları Supabase beta_solo_results tablosuna kaydolur. Profilde oynanan tur, doğru tur, başarı oranı, en iyi seri, toplam deneme puanı ve son beş sonuç.
-- Tur sahibi başta sabit; misafir sonuçları hesaba yazılmaz. Tek UUID tekrar denemeyi idempotent yapar. played_at yeniden denemede korunur; seri gerçek tur sırasına dayanır.
-- RLS yalnız kendi sonuçlarını SELECT/INSERT ettirir; istemciden UPDATE/DELETE yok. Puan veritabanında hesaplanır. RPC get_beta_stats security invoker kullanır.
+## Güncelleme — sınırsız Solo koşusu
 
-## Veri ve çalıştırma
+Kullanıcı önceki Solo sürümünün çalıştığını doğruladı. Solo artık60saniye başlangıç,sınırsız soru ve her doğruya mevcut sayaç üstüne+5saniye/+100puan verir. Doğru ve geçmede anında yeni soru; yanlış3sn aynı soruda bekletir,süre akmaya devam eder. Geçmede bonus yok,süre üst sınırı yok. Soru kalıpları6dan18e çıkarıldı;misafir torbası18çeşidi karışık tüketir. Ranked10soru20sn ve Elo kuralları korunur.
 
-- Supabase: Duydum, binissqzmhxnqlftwlnj, ToxArts Studios, eu-central-1.
-- Schema: db/schema.sql; uzak migrationlar beta_solo_results ve beta_result_play_order.
-- Node ile scripts/serve.cjs veya baslat.cmd → http://localhost:3000. Hesap/profil/kayıt internet gerektirir. Misafir solo index.html doğrudan açılarak çevrimdışı çalışır.
-- SDK 2.118.0 yerel assets/vendor içindedir; manifest SHA-256 kaydı var. İstemcide yalnız publishable key var.
-- İlk şarkı: Simitler — Snap, assets/track-001.mp3; 255.790 bayt, 15,98694 saniye (612 MP3 frame). Orijinal kayıt korunur. scripts/prepare-audio.cjs en fazla 16 saniyelik MP3 hazırlar.
-- Oyun içi oturum puanı yenilemede sıfırlanır; başarılı kaydedilen girişli beta sonuçları kalıcıdır. Başarısız kayıt kuyruğu yalnız sayfa belleğinde; kapatmadan retry gerekir.
+Yeni Supabase Solo format_version2; eski kayıtlar/aktif version1 oturumlar veri silmeden korunur. Sunucu yalnız mevcut soruyu tutar; UUID tekrarları sonraki soruda dahi çift süre/puan eklemez.
 
-## Tamamlanmayanlar / sınırlar
+Node doğrulaması:18.000 bağımsız aritmetik örneği,60→50→55,40+cevap sınırsız devam,skip0bonus,cooldown,son milisaniye/timeout,UI15doğru125sn,inputtemizleme ve eski poll/hesapyarışları geçti. SQL25doğru,UUID tekrarları,50→55,skip,timeout ve tamRanked/Elo regresyonu geçti. GerçekChrome misafir60sn başlangıç,+5sn sonrası61sn,12.soruda40sn iledevam ve yeni yüzde/zaman soruları görüldü. GerçekChrome süre bitiminde100puan/1doğru/11tamamlanan soru sonucu,ardından yeniden başlatmada60sn/SORU1 doğrulandı. Yeni390pxmobil görünüm content375px,yataytaşma yok;tarayıcıerrorlog boş. Yeniformat2girişli koşu SQL ile doğrulandı,gerçek kullanıcı hesabıyla tarayıcı koşusu ayrıca yapılmadı.
 
-- Katalog 10 şarkıya genişletildi; arkadaşlarla 10 turluk maç altyapısı henüz yok.
-- Arkadaş odası eklendi; gerçek iki tarayıcı/iki hesapla maç testi ve dış erişimli barındırma henüz yapılmadı.
-- Ranked eşleştirme/rütbe/anti-hile; liderlik tablosu ve solo sıralama formülü.
-- Gerçek Snap kapağı; mevcut görsel soyut yedektir.
-- Günlük görev, paylaşım kartı ve kalıcı offline kayıt kuyruğu. Katalog hazırlama ekranı kullanıcı isteğiyle kapsam dışında.
-- Yazım toleransı kısa isimlerde fazla geniş olabilir; notes.md içinde açık karar.
-- Beta sonuçlarının kazanma/aşama bilgisi istemciden gelir, rekabet için güvenilir skor değildir. played_at istemci zamanıdır. Bilinen şarkı sayacı benzersiz eser değil doğru tur sayar.
-- Önceki Sites yayını güncel yerel projenin parçası değildir; silindiği doğrulanmadı. Sites tekrar kullanılmaz.
+Aşağıdaki ilk sürüm doğrulama kayıtları tarihseldir;10soruluk Solo yeni kural değildir.
 
-## Doğrulama kanıtı
+## İlk sürüm oynanışı (tarihsel)
 
-- JS sözdizimi, DOM ID/yerel asset kontrolleri; AGENTS/CLAUDE eşitlik kontrolü geçti.
-- Oyun ve auth akışları Node benzetimleriyle önceki aşamada kontrol edildi.
-- Canlı Auth settings ve beklenen invalid_credentials yanıtı; kullanıcı gerçek kayıt/girişi doğruladı.
-- Gerçek tarayıcı: misafir/ana sayfa/solo sonuç; girişli gerçek tur → “hesabına kaydedildi” → sayfa yenileme → profil 1 tur, 1 doğru, %100, seri 1, 1000 puan doğrulandı.
-- Kullanıcının adı değiştirilmeden profil kaydetme test edildi; profil güncellemesinden sonra istatistikler korundu. Test amaçlı 1 gerçek beta turu hesapta bulunur.
-- SQL rollback testleri: owner insert/read, diğer hesap okuma/yazma engeli, anonim RPC engeli, generated points, update engeli, duplicate UUID engeli, sonradan retry ile tur sırası/seri koruması. Test SQL verileri kalıcı bırakılmadı.
-- Bağımsız denetim üç race/retry sorunu buldu; auth.ready bekleme, played_at ve hesabına dönünce retry kontrolü düzeltildi.
-- Profil mobil 390 px kontrolü: sayfa/content 375 px, dialog 339 px, yatay taşma yok. Gerçek telefon klavyesi test edilmedi; kesit ses zamanlaması milisaniye düzeyinde ölçülmedi.
-- Supabase security advisor tabloda RLS sorunu bildirmedi. Mevcut proje uyarısı: leaked password protection kapalı; plan/uygunluk değerlendirilmedi, otomatik ayar değişmedi. Kaynak: https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection
+- 10 soru; işlem önceliği, eksik sayı, kısa sözel işlem, örüntü ve parantez. Tam sayı cevap.
+- Soru20sn, cevap gösterimi2sn, yanlış cevapta3sn bekleme. Solo soru geçme var. İlk Ranked sorusunda3sn bağlantı payı var.
+- Misafir Solo yerel pratik: son30 koşu tarayıcıda saklanır, canlı tabloya yazılmaz.
+- Girişli Solo: sunucu soru/süre/cevap/puan doğrular; tamamlanan koşular haftalık/aylık tabloda toplanır. Yarım bırakılanlar tabloya girmez. Solo Elo değiştirmez.
+- Ranked1v1: benzer Elo kuyruğu, bekledikçe genişleyen aralık, aynı10 soru, ilk doğru100/ikinci60. Kazanan maç puanıyla belirlenir; Elo1000/K32, eşit Elo'da +16/−16. Beraberlik eşit Elo'da0.
+- Hükmen mağlubiyet ve45sn bağlantı toleransı; iki taraf da stale ise Elo değişmeden kapanış. İkinci gerçek oyuncu gerekir; bot rakip veya sahte sıralama yok.
+- Başlangıç rütbe eşikleri Çırak/Hesapçı/Çözücü/Stratejist/Üstat/Dâhi. Rakamlar ilk sürüm varsayımlarıdır.
 
-## Dosya haritası
+## Backend
 
-index.html / style.css: arayüz; app.js: oyun; auth.js: hesap ve olay arayüzü; profile.js: profil, kayıt ve istatistik; config.js: public ayarlar; db/schema.sql: şema kaynağı; scripts/: bakım araçları; assets/: yerel varlıklar.
+Supabase binissqzmhxnqlftwlnj içinde ayrı math_private şeması ve public.math_game RPC. Kaynak db/math.sql, rollback test db/math-test.sql. Mevcut eski tablolar değişmedi. Özel tablolar RLS ve doğrudan erişim iptaliyle korunur; RPC hesap/üyelik doğrular. Cevap yalnız sonuçta açılır. UUID tekrar denemesi çift puanı engeller; maç kilidi ve settled Elo tekrarını engeller.
 
-AGENTS.md ve CLAUDE.md eş kurallar; notes.md fikir/açık karar; README.md çalıştırma. Sonraki adımı kullanıcıyla seç: katalog büyütme veya arkadaş odası altyapısı. Yeni model kendiliğinden ranked başlatmamalı.
+Uzak migrationlar backend alt ajanı tarafından uygulandı. Advisor yeni matematik güvenlik uyarısı bildirmedi; özel tablolarda politikasız RLS INFO bilinçli deny-all. Eski oda SECURITY DEFINER ve leaked password protection uyarıları değişmedi.
 
-## Güncelleme — 10 şarkılık katalog
+## Doğrulama
 
-Kullanıcının verdiği 9 MP3 eklendi. catalog.js: Snap; TRALALA; Günah Benim; Zamansızdık; Şarkılar Sokaklara Ait; Toz Pembe; RÜYA; CRUSH!; Hileli; Karambol. Her kayıtta şarkı adı/sanatçı/ses/kapak var. Tüm sesler 15,98694 sn ve 255.790 bayt; 10 ses toplam 2.557.900 bayt. Yeni 9 kaynak 7.296.706 bayttan 2.302.110 bayta indi. Orijinaller değiştirilmedi. assets/audio/preparation.json işlem raporu.
+- scripts/test-math.cjs:12.000 sorunun bağımsız aritmetik doğrulaması; tam sayı parser;2999/3000ms bekleme; tam süre sınırı; geç/cevap/10tur; çift puan engeli.
+- Gerçek app.js VM akışı:misafir10tur,sonuç/yeniden başlat,yerel geçmiş,misafir Ranked giriş şartı,canlı puan yazmama. Gecikmiş poll cevabının doğru cevabı veya hesap değişimini geri almaması.
+- scripts/test-auth.cjs:Pages/localhost dönüşü ve çıkış sonrası gecikmiş kullanıcı yanıtı regresyonu geçti.
+- SQL iki sentetik kullanıcı rollback:tam Solo1000,Ranked10tur100/60,Elo1016/984,tek settlement,üye/anon erişim,cevap gizliliği,cooldown,UUID,skip,cancel,yarım Solo dışlama,timeout,iki taraf stale. Kalıcı test kullanıcısı/verisi bırakılmadı.
+- Gerçek Chrome localhost:10soruluk misafir koşusu3doğru300puan;yanlış3sn bekleme ve yeniden doğru cevap;skip,sonuç ve ana sayfa;mobil yeniden başlat;Ranked giriş dialogu;canlı anonim liderlik boş yanıtı doğrulandı. Tarayıcı error log boş.
+- Mobil390px görünüm:content375px(scrollbar payı),yatay taşma yok;ana sayfa ve oyun görsel incelendi. Gerçek telefon klavyesi denenmedi.
+- DOM69benzersizID ve auth hedefleri;JS syntax,talimat eşitliği,diff whitespace kontrolü geçti.
 
-9 doğru kayıt kapağı Apple Music/iTunes metadata ile eşleştirilip 400×400 JPG olarak yerel indirildi; toplam 503.605 bayt. Kaynaklar assets/covers/sources.json. Snap kullanıcı bestesi için gerçek kapak yok, soyut fallback. Kapaklar yalnız sonuçta açılır.
+## Kalan doğrulamalar ve sınırlar
 
-Fisher–Yates torba seçimi her katalog döngüsünü rastgele ve tekrarsız yapar. Sınırsız solo döngüler devam eder; döngü sınırında art arda aynı şarkı engellenir. Henüz oda maçı yoktur. Profil kayıtları songId üzerinden gerçek şarkıya bağlanır. Supabase sorumlusu expand_beta_catalog_allowlist migrationını uyguladı; db/schema.sql güncel ve eski kayıtlar korunur.
+- İki gerçek hesap/iki cihazla eşzamanlı Ranked tarayıcı maçı ve yeni matematik profilinin kullanıcı hesabıyla canlı kontrolü henüz yapılmadı. SQL/VM bunun yerine geçtiği iddia edilmez.
+- Bot/otomatik çözüm önleme,yük testi,üretim izleme ve ayrıntılı kötüye kullanım sınırları yok. İki stale oyuncuda maç sonucu başlığı skora göre görünebilir,gerçek Elo değişimi0 kalır.
+- Başlangıç Elo,rütbe eşikleri,puan dengesi ve solo dönem hesabı oynanabilir ilk sürüm ayarlarıdır;değiştirilebilir.
+- Yerel sunucu localhost:3000 hazır. GitHub'a yeni matematik sürümü gönderilmedi;Pages deployment yapılmadı/doğrulanmadı. Repo adı hâlâ duydum.
 
-Doğrulama: scripts/test-catalog.cjs 100 döngü, tüm 10 ses MP3 frame/süre, tüm ad/sanatçı/karakter kabulü ve 20 uygulama turu/sonuç/kimlik/Pas testlerini geçti. Bağımsız ajan 30.000 seçim ve 30 tur inceledi, engelleyici hata bulmadı. Supabase rollback testleri 10 geçerli ID ve geçersiz ID reddi, puan, UUID, played_at, RLS/anon kontrollerini geçti. Yeni RLS uyarısı yok.
+## Dosyalar
 
-Gerçek tarayıcıda iki Pas ile bitirilen test turu kaydedildi (Snap ve Günah Benim, ikisi de 0 puan). Günah Benim kapağı 400px olarak yüklendi, hata günlüğü boş. Bunlar kullanıcının beta hesabındaki test geçmişine eklendi. 10 parçanın her biri tarayıcıda tek tek dinlenmedi; frame yapısı ve süreler doğrulandı.
+index.html/style.css arayüz;app.js denetim;math-engine.js misafir motoru;auth.js/config.js/vendor hesap;db/math.sql backend;scripts/test-math.cjs kontroller. README çalıştırma ve Pages yönergesi. Eski müzik testleri yeni sürümün kanıtı değildir.
 
-Sonraki hedef: arkadaş odası/lobi ve 10 turluk kapalı beta. Şarkı ekleme UI aracı yapılmayacak; yeni dosyalar kullanıcıyla manuel eklenecek.
+## Solo tempo ayarı — 27 Ekim 2026
 
-## Tahmin otomatik tamamlama
+Kullanıcı daha rahat tempo için en uygun ayarın seçilmesini onayladı. Yeni Solo başlangıcı90saniye;doğru+5saniye/+100puan,yanlış3sn,sorulimitsiz kuralı korunur. Önceki60saniye kayıtları tarihseldir. Yeni süre yalnız yeni koşularda başlar;aktif koşu sıfırlanmaz. Node motor/UI kontrolleri90→80→85 örneğiyle güncellendi.
 
-Tahmin girişine erişilebilir combobox/listbox eklendi. Genel katalogdan ad/sanatçıya göre en fazla 3 öneri; Türkçe karakter normalleştirme; click ve ok/Enter ile yalnız alana ekleme. Escape/blur/Pas/tur bitişi listeyi kapatır. Kapak ve doğru cevap önerilere özel ipucu sağlamaz. Tarayıcıda manifest→3 öneri, tıklama, sarkilar→Şarkılar Sokaklara Ait, ArrowDown/Enter ve hakkın tüketilmemesi doğrulandı; test turu bitirilmeden sayfa yenilendi, yeni sonuç kaydı oluşturulmadı. Katalog/regresyon testleri geçti.
+90sn doğrulama: yerel motor/UI testleri geçti. Canlı Supabase math_solo_initial_90_seconds uygulandı; rollbacktesti90başlangıç,80→85bonus,aktif/eskikoşu deadlinekoruması ve Ranked/Elo regresyonunu geçti. Bu küçük süre değişikliği için yeni gerçek tarayıcı testi yapılmadı.
 
-## Üst menü ve ikon düzeltmeleri — 24 Ekim 2026
+### Ranked saat sistemi doğrulaması
 
-Kullanıcının profil adı, metin ikonlar ve Ana sayfa dönüşü geri bildirimleri uygulandı. Üstte avatar + okunaklı ad + Profilim rozeti; modlarda tutarlı inline SVG oynat/grup/kupa ve açık modda ok/kapalı modda kilit. Ana sayfaya dön ayrı 44px düğme. Bazı eylem okları da SVG ile değişti. Auth isim güncelleme id/data sözleşmesi korundu. Gerçek tarayıcıda profil açılışı ve geri dönüş kontrol edildi; mobil viewport 375px içerik375px, isim görünür ve taşma yok. Katalog/regresyon testi geçti; test sırasında tur başlatılmadığından sonuç kaydı eklenmedi.
+Canlı Supabase math_ranked_personal_clocks_v3 ve math_ranked_settlement_before_restart uygulandı. Yeni Ranked format3,oyuncuyaözel deadline/question_index ve ortak starts_at kullanır. Aynısorudizisi private match_questions tablosunda tutulur;başlangıçtanönce soru/cevap kapalıdır.
 
-## Güncelleme — yalnız arkadaşlarla kapalı beta
+SQL rollback:25doğru ile sınırsızilerleme,ortak90snbaşlangıç,kişiyeözel+5sn,rakibindeğişmemesi,aynıindexaynısoru,yanlış3sn,UUIDtekrarları,eskitur,geçcevap,puanıyüksekolanınsüreyenilgisi,ikigecikmişdeadlinekarşılaştırması,eşitdeadlineberaberlik,Eloyenidenişlememe ve timeoutsonrası doğrudanqueue/solo_start ileElokaçırmaengeli geçti. Solo90snveeskioturumkorumaregresyonları geçti. Testverileri rollback.
 
-Oda Oluştur/Katıl,5 karakterli rastgele kod ve lobi eklendi. Solo ve Ranked erişimi kapalı; mevcut solo kodu/istatistikleri korunur. Hesap şart;2–8 oyuncu. Kod oda boyunca geçerli;10tur sonunda oda kapanmaz. Host Tekrar oyna ile yeni maç başlatır. Host kapanışta/son ayrılmada kod geçersiz; rezerv/tombstone yeniden kullanımını engeller. Host ayrılınca devir,90sn stale üyelik temizliği ve24saat idle TTL var; aktif odada TTL yenilenir.
+NodeVM:ortak3sngerisayım,soruhenüzgelmediysegönderimengeli,80→85yalnızkendisüresi,rakipilerlemesindegirdininkorunması,10üstüsoru,sıfırdayerelpuanlakazananüretmeme,sunucukararıveElo geçti. 18.000aritmetikörneğiveSolo/authregresyonları geçti. GerçekChrome anasayfakuralları doğrulandı;ikigerçekhesaplabutarayıcıdamaçhenüzdenenmedi. Yeniiki-saatoyunekranımobildesunucumaçıylagörseltestedilmedi.
 
-rooms.js Supabase public.duydum_room RPC ile1,5sn polling yapar. Sunucu10farklı şarkı,60sn limit,erken bitiş,4sn sonuç ve10tur finali yönetir. guess/pass stage ve requestUUID ile korunur; score ve normalizasyon sunucudadır. Livefeed tahmin metnini göstermez. Kendi bitiren oyuncu diğerlerini bekler, kapak yalnız ortak sonuçta açılır. Arkadaş skoru oda ömründe kalır, solo kayıtlarına karışmaz.
-
-Remote migrationlar: private_friend_rooms; friend_rooms_idle_ttl_and_variable_scope; friend_room_expected_stage_guard. db/rooms.sql kaynağı; db/rooms-test.sql rollbacktesti. Özel şema doğrudan erişime kapalı, tek authenticated definer RPC auth.uid/üyelik/host kontrolü yapar. Advisor definer kullanımını ve bilinçli deny-all private RLS politikalarını bildiriyor; bunlar incelendi, sahte policyyle gizlenmedi. Önceki leakedpassword uyarısı değişmedi.
-
-Doğrulama:
-- Supabase rollbacktesti2 kullanıcıyla10turu tamamladı;tekrarsız deck,tahmin gizliliği,kendi aşaması,idempotency,eski aşama reddi,puan,60sn,final→replay aynıcode/yeni match,host devri,kapasite,anon/member/host kısıtları,stale oda ve kapalı kod kontrolleri geçti. Sentetik kullanıcı ve test verileri rollback,kalıcı bırakılmadı.
-- scripts/test-rooms.cjs: solo kapalı,oluştur/lobi/2kişi start,Pas,açılmayan erken cevap,solo yazımı olmaması,sonuç,lobi/maça dön,poll veclose;hesap değişiminden sonra eskiRPCnin odayı açmaması geçti.
-- Katalog20tur/100döngü regresyonu ve DOM/JS kontrolleri geçti.
-- Gerçek tarayıcıda5haneli oda oluşturma,yenilemeyle dönüş,bir kişiyle start engeli,hostclose veeskiWRWKP koduyla katılım reddi doğrulandı. Sonrasında kullanıcı hesabında örnek bir lobi açıldı (test kodu belgeye alınmaz). Mobil375px içerik375px,yatay taşmayok;browsererrorlog boş.
-- İki ayrı gerçek tarayıcı/hesapla sesli maç henüz denenmedi;sunucutesti ve istemcibenzetimi bunun yerine geçtiği iddia edilmez. Yerel song_id/katalog DevTools ile incelenebilir;ranked düzeyinde cevap gizliliği garantisi yok.
-
-Dış erişim:localhost yalnız cihaz içi. Arkadaş daveti için Sites dışında barındırma/erişilebilir URL hâlâ kurulmalı. Oyun sesleri yerel asset;Supabase bağlantısı tek başına HTML/MP3 dosyalarını başka cihazlara sunmaz.
-
-## GitHub yükleme ve Pages hazırlığı — 24 Ekim 2026
-
-Solo kapalı kartının oku kilit SVG ile düzeltildi. Son bağımsız denetim auth başlangıcındaki geç getUser yanıtının çıkış sonrası eski kullanıcıyı yeniden göstermesi yarışını buldu; accountRevision guard ile düzeltildi ve scripts/test-auth.cjs ile tekrar üretim/regresyon testi geçti. Auth dönüşü artık sayfanın taban dizininden türetilir; /duydum/ ve localhost base testleri geçti.
-
-GitHub Pages mimari olarak uyumlu: statik arayüz/yerel sesler Pages, backend Supabase. Supabase ajanı Pages Origin ile Auth GET ve oda RPC preflight CORS yanıtlarını canlı doğruladı. .nojekyll eklendi. Henüz Pages üzerinde deployment ve iki ayrı cihaz maçı yapılmadı. Kullanıcı EReaXe/duydum deposuna yüklemeyi istedi; Pages etkinleştirme bu hazırlıkla ayrı tutulur. Gizli credential yok; config.js public publishable key içerir.
-
-GitHub yüklemesi doğrulandı: https://github.com/EReaXe/duydum, main ilk commit06375c2. Remote config.js içeriği GitHub connector üzerinden okundu. Eski Sites/uzun ses içeren yerel prototip geçmişi local-prototype-archive dalında yalnız yerelde korundu; GitHub’a temiz parentless ilk snapshot gönderildi. main origin/main izliyor. Pages deployment henüz etkinleştirilmedi. Kilit görseli gerçek tarayıcıda doğrulandı; tüm üç test scripti ve talimat eşitliği geçti.
+Bağımsızdenetimdebulunan timeoutyenibaşlatmaElokaçırması düzeltildi. Yeni frontend yerelde;GitHub/Pagesyayınıyapılmadı.
